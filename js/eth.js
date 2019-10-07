@@ -835,10 +835,11 @@ window.addEventListener('load', function () {
 			})
         }
     } else {
-		Ealt.Ealert({
-			title:'Tips',
-			message:'no MetaMask'
-		})
+		// Ealt.Ealert({
+		// 	title:'Tips',
+		// 	message:'no MetaMask'
+		// })
+		alert(123)
 	}
 })
 
