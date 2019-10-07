@@ -709,7 +709,7 @@ function destruction(value, callback, id) {
 }
 
 window.addEventListener('load', function () {
-    if (typeof web3 !== 'undefined') {
+    if (web3) {
         getChange();
 
         if (window.ethereum) {
@@ -831,15 +831,14 @@ window.addEventListener('load', function () {
 			// console.log("no MetaMask");
 			Ealt.Ealert({
 				title:'Tips',
-				message:'no MetaMask'
+				message:'no MetaMask. Download address is https://metamask.io.'
 			})
         }
     } else {
-		// Ealt.Ealert({
-		// 	title:'Tips',
-		// 	message:'no MetaMask'
-		// })
-		alert(123)
+		Ealt.Ealert({
+			title:'Tips',
+			message:'no MetaMask. Download address is https://metamask.io.'
+		})
 	}
 })
 
