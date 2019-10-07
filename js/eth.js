@@ -831,13 +831,13 @@ window.addEventListener('load', function () {
 			// console.log("no MetaMask");
 			Ealt.Ealert({
 				title:'Tips',
-				message:'no MetaMask. Download address is https://metamask.io.'
+				message:'No MetaMask. Download address is https://metamask.io.'
 			})
         }
     } else {
 		Ealt.Ealert({
 			title:'Tips',
-			message:'no MetaMask. Download address is https://metamask.io.'
+			message:'No MetaMask. Download address is https://metamask.io.'
 		})
 	}
 })
