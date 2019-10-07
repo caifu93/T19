@@ -21,6 +21,8 @@
         localStorage.removeItem("ncc-isLogin");
         localStorage.removeItem("ncc-token");
 
+        console.log(web3)
+
         if (web3) {
             login({walletPath: web3.eth.accounts[0]});
         }
