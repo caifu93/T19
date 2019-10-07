@@ -834,7 +834,12 @@ window.addEventListener('load', function () {
 				message:'no MetaMask'
 			})
         }
-    }
+    } else {
+		Ealt.Ealert({
+			title:'Tips',
+			message:'no MetaMask'
+		})
+	}
 })
 
 //change account
