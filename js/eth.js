@@ -709,7 +709,7 @@ function destruction(value, callback, id) {
 }
 
 window.addEventListener('load', function () {
-    if (web3) {
+    if (typeof web3 !== 'undefined') {
         getChange();
 
         if (window.ethereum) {
