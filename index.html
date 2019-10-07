@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NCC智能合约</title>
+    <title>NCC</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/api.js"></script>
     <script src="js/common.js"></script>
@@ -21,9 +21,9 @@
 
         login({walletPath: web3.eth.accounts[0]});
         if (/Android|webOS|iPhone|iPod|BlackBerry/g.test(navigator.userAgent)) {
-            window.location.href = window.location.host + "/h5/home.html";
+            window.location.href = "/h5/home.html";
         } else {
-            window.location.href = window.location.host + "/pc/home.html";
+            window.location.href = "/pc/home.html";
         }
     </script>
 </body>
