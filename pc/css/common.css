@@ -1,0 +1,537 @@
+html, body {
+    min-width: 1280px;
+    font-size: 14px;
+    color: #333;
+}
+.wrap-content, .header-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    background: #061567;
+}
+.header .header-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.go-home {
+    padding: 5px 10px;
+    color: #fff;
+    background: #F8931F;
+    border-radius: 4px;
+}
+.logo img {
+    width: 25px;
+    height: 29px;
+    vertical-align: middle;
+}
+.lang-box {
+    height: 47px;
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+    z-index: 1;
+}
+.lang-box > p {
+    width: 80px;
+    height: 29px;
+    text-align: center;
+    line-height: 29px;
+    background: #1857E2;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lang-box > p img {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+.select-lang {
+    display: none;
+    width: 120px;
+    text-align: center;
+    position: absolute;
+    background: #fff;
+    color: #222;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    padding: 10px 0;
+    top: 45px;
+    right: 0;
+    z-index: 99;
+}
+.select-lang li {
+    line-height: 40px;
+}
+.select-lang li:hover {
+    background: #F6F6F6;
+}
+
+/* 首页 */
+.banner-box {
+    height: 1388px;
+    background: url("../images/bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.banner-box .banner {
+    text-align: center;
+}
+.banner-box .banner h1 {
+    color: #fff;
+    font-size: 68px;
+    letter-spacing: 5px;
+    padding-top: 270px;
+}
+.banner-box .banner h3 {
+    color: #B7E7E9;
+    font-size: 27px;
+    padding-top: 10px;
+}
+.banner-box .banner p {
+    padding-top: 180px;
+    color: #B7E7E9;
+}
+.banner-box .banner p img {
+    vertical-align: top;
+}
+.banner-box .banner p span {
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+.banner-box .notice {
+    width: 1200px;
+    height: 50px;
+    line-height: 50px;
+    border: 3px solid rgba(11, 47, 88, .3);
+    border-radius: 4px;
+    background: #2daedd;
+    margin: 280px auto 0 auto;
+}
+.banner-box .notice img {
+    padding-bottom: 6px;
+    padding-left: 20px;
+}
+.banner-box .swiper-container {
+    display: inline-block;
+    width: 1100px;
+    height: 50px;
+    color: #fff;
+    margin-left: 20px;
+}
+.banner-box .fourth-link {
+    width: 1200px;
+    margin: 80px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.banner-box .fourth-link li a {
+    display: block;
+    width: 275px;
+    height: 300px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    background-size: 175px 132px;
+    background-repeat: no-repeat;
+    background-position: center 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-top: 240px;
+}
+.banner-box .fourth-link li:hover a {
+    background-color: #2DAEDD;
+    color: #fff;
+}
+.banner-box .fourth-link li:nth-child(1) a {
+    background-image: url("../images/canyuheyue.png");
+}
+.banner-box .fourth-link li:nth-child(2) a {
+    background-image: url("../images/woyaoshengji.png");
+}
+.banner-box .fourth-link li:nth-child(3) a {
+    background-image: url("../images/yaoqinghaoyou.png");
+}
+.banner-box .fourth-link li:nth-child(4) a {
+    background-image: url("../images/wodeshouyi.png");
+}
+.content-box {
+    background: #081976;
+}
+.content-box .rule-info {
+    padding-top: 50px;
+}
+.content-box .rule-info .title {
+    text-align: center;
+    margin-bottom: 90px;
+}
+.content-box .rule-info .title .name {
+    color: #fff;
+    font-size: 22px;
+    padding: 0 30px;
+}
+.content-box .rule-info .title img {
+    position: relative;
+    top: 6px;
+}
+.content-box .rule-info .rule-cont {
+    width: 1145px;
+    min-height: 560px;
+    padding-left: 55px;
+    padding-top: 45px;
+    color: #fff;
+    background: #2ba5d7;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: relative;
+}
+.content-box .rule-info .rule-cont img {
+    position: absolute;
+    top: 60px;
+    right: 65px;
+}
+.content-box .rule-info .rule-cont .ru-title {
+    font-size: 20px;
+}
+.content-box .rule-info .rule-cont .rule-text {
+    width: 765px;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.content-box .form-box {
+    width: 1200px;
+    margin: 40px auto 0 auto;
+}
+.content-box .form-box .form-title {
+    color: #fff;
+    font-size: 23px;
+    margin-right: 5px;
+}
+.content-box .form-box .form-tip {
+    color: #f8931f;
+}
+.content-box .form-box .eth-num {
+    outline: 0;
+    border: 1px solid #f8931f;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    width: 1063px;
+    height: 58px;
+    color: #d2d2d2;
+    font-size: 18px;
+    padding-left: 26px;
+    background: none;
+}
+.content-box .form-box .submit {
+    outline: 0;
+    border: 0;
+    background: #f8931f;
+    border-radius: 0 5px 5px 0;
+    width: 110px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 20px;
+    vertical-align: bottom;
+}
+.content-box .statistics {
+    margin-top: 110px;
+}
+.content-box .statistics .title {
+    text-align: center;
+    font-size: 25px;
+    color: #009DF4;
+    background-image:-webkit-linear-gradient(right,#009DF4,#00E9D0); 
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent;
+}
+.content-box .statistics .title2 {
+    text-align: center;
+    font-size: 18px;
+    color: #00BEF7;
+    margin-bottom: 54px;
+    margin-top: 3px;
+}
+.content-box .statistics .sta-box {
+    width: 1032px;
+    height: 504px;
+    background: url("../images/keji-bg02.png") no-repeat;
+    padding: 48px 23px;
+    margin: 0 auto;
+}
+.content-box .statistics .sta-box li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 38px;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+}
+.content-box .statistics .sta-box li:nth-child(2n+1) {
+    background: rgba(11, 161, 248, .6);
+}
+.lever-img img {
+    width: 50px;
+    position: relative;
+    top: 8px;
+    left: 10px;
+}
+.friend-form .lever-img img {
+    left: 0;
+}
+.home-footer {
+    height: 450px;
+    background: url("../images/foot.png") no-repeat center -412px;
+}
+.home-footer .copyright {
+    width: 1200px;
+    height: 83px;
+    line-height: 83px;
+    text-align: center;
+    color: #fff;
+    background: rgba(4, 34, 120, .7);
+    font-size: 16px;
+    margin: 0 auto;
+    position: relative;
+    top: 310px;
+}
+
+/* 我的合约 */
+.contract-banner {
+    height: 600px;
+    background: url("../images/bgerji.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.contract-banner .cb-box {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 200px;
+}
+.contract-banner .cb-box > div {
+    margin-top: 35px;
+}
+.contract-banner .cb-box .name {
+    color: #fff;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.contract-banner .cb-box .vice-name {
+    color: #b7e7e9;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.contract-banner .cb-box .line {
+    background: #f8931f;
+    width: 130px;
+    height: 5px;
+}
+.contract-nav, .contract-form .item {
+    height: 87px;
+    line-height: 87px;
+    background: #f5f5f5;
+    margin-bottom: 35px;
+}
+.contract-form .item span {
+    display: inline-block;
+    width: 123px;
+    text-align: right;
+}
+.contract-nav .cn-box {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+.contract-nav .cn-box img {
+    vertical-align: middle;
+}
+.contract-nav .cn-box .current {
+    color: #999;
+}
+.contract-nav .cn-box a {
+    display: inline-block;
+    color: #f8931f;
+    padding: 0 25px;
+}
+.contract-nav .cn-box a:hover {
+    background: #0642a5;
+    color: #fff;
+}
+.contract-form {
+    text-align: center;
+    height: 800px;
+}   
+.contract-form .item {
+    color: #333;
+}   
+.contract-form .item .name {
+    color: #62C66A;
+    padding-left: 5px;
+}   
+.contract-form .item .name2 {
+    color: #666666;
+    padding-left: 5px;
+}   
+.contract-form .item input {
+    width: 460px;
+    outline: 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background: none;
+    color: #bfbfbf;
+    height: 35px;
+    padding-left: 10px;
+    margin-left: 5px;
+}   
+.contract-form .contract-send, .contract-form p {
+    width: 398px;
+    height: 66px;
+    line-height: 66px;
+    font-size: 20px;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    background: none;
+    background: url("../images/send.png") no-repeat;
+    cursor: pointer;
+    margin-top: 100px;
+}   
+.contract-form p {
+    margin: 100px auto 0 auto;;
+}
+.footer {
+    height: 85px;
+    line-height: 85px;
+    color: #fff;
+    background: #374b8d;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* 邀请好友 */
+.friend-banner img {
+    margin-top: -40px;
+}
+.contract-form .flex-item {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.friend-form .flex-item .name2 {
+    outline: 0;
+    border: 0;
+    text-align: right;
+}
+.friend-form .flex-item .link-input {
+    margin-top: 26px;
+}
+
+/* 我的收益 */
+.profit {
+    margin-bottom: 100px;
+    position: relative;
+}
+.profit .profit-top {
+    height: 157px;
+    background: url("../images/income.png") no-repeat;
+    padding-top: 13px;
+    padding-left: 75px;
+}
+.profit .profit-top p {
+    color:  #fff;
+    font-size: 20px;
+    padding-top: 30px;
+}
+.profit .profit-top .value {
+    color: #ffc500;
+    padding-left: 10px;
+}
+.profit .profit-top .value img {
+    width: 50px;
+    position: relative;
+    top: 10px;
+}
+.income {
+    display: flex;
+    justify-content: space-between;
+}
+.income li {
+    width: 585px;
+    height: 620px;
+    background: #f5f5f5;
+    text-align: center;
+    box-sizing: border-box;
+}
+.income li .title {
+    font-size: 18px;
+    margin: 30px 0; 
+}
+.income li table,  .income li table tr {
+    width: 585px;
+    display: block;
+}
+.income li table thead {
+    width: 585px;
+    display: block;
+    border-bottom: 1px solid #eaeaea;
+}
+.income li table th {
+    color: #666;
+    line-height: 40px;
+    width: 19%;
+    display: inline-block;
+}
+.income li table tbody {
+    width: 585px;
+    height: 460px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+}
+.income li table tbody td {
+    display: inline-block;
+    width: 19%;
+    line-height: 40px;
+    white-space: nowrap;
+}
+.income li table tbody td .lang {
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    line-height: 25px;
+    color: #009ce4;
+    border: 1px solid #009ce4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.income li.settled table th, 
+.income li.settled table tbody td {
+    width: 24%;
+}
+.income li.settled table tbody {
+    height: 400px;
+}
+.profit .settled-bottom {
+    width: 555px;
+    height: 60px;
+    padding-left: 30px;
+    line-height: 60px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #03aee8;
+    color: #fff;
+}

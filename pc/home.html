@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/Eject.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/elastic.js"></script>
+    
+    <script src="../js/common.js"></script>
+    <script src="../js/eth.js"></script>
+    <script src="../js/api.js"></script>
+    
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <img src="images/logo.png">
+                <span class="lang" key="Title"></span>
+            </div>
+            <div>
+                <a href="javascript:void(0)" class="lang go-home" key="Home"></a>
+                <div class="lang-box">
+                    <p class="selected-lang"><span>繁體中文</span><img src="images/more.png"></p>
+                    <ul class="select-lang">
+                        <li class="translate" id="fan">繁體中文</li>
+                        <li class="translate" id="en">English</li>
+                        <li class="translate" id="kor">한국어</li>
+                        <li class="translate" id="jp">日本語</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-box">
+        <div class="banner">
+            <h1 class="lang" key="Title">糖果派</h1>
+            <h3>Candy pie</h3>
+            <p>
+                <img src="images/zuosanjiao.png">
+                <span>Starting at 2019.04.09</span>
+                <img src="images/yousanjiao.png">
+            </p>
+        </div>
+
+        <div class="notice">
+            <img src="images/tongzhi.png">
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="cont1"></div>
+                <script type="text/html" id="temp1">
+                    {%for(var i=0;i< list.length;i++){%}
+                        <div class="swiper-slide">{%= list[i] %}</div>
+                    {%}%}
+                </script>
+            </div>
+        </div>
+        
+        <ul class="fourth-link">
+            <li>
+                <a href="contract.html">
+                    <span class="lang" key="Pcontract">參與合約</span>
+                </a>
+            </li>
+            <li>
+                <a href="update.html">
+                    <span class="lang" key="WantUpdate">我要升級</span>
+                </a>
+            </li>
+            <li>
+                <a href="friend.html">
+                    <span class="lang" key="Invitefriends">邀請好友</span>
+                </a>
+            </li>
+            <li>
+                <a href="profti.html">
+                    <span class="lang" key="Myincome">我的收益</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-box">
+        <div class="rule-info">
+            <p class="title">
+                <img src="images/title.png">
+                <span class="lang name" key="Ruledescription">规则说明</span>
+                <img src="images/title.png">
+            </p>
+            <div class="rule-cont">
+                <img src="images/shengjiguize.png">
+                <div id="cont"></div>
+                <script type="text/html" id="temp">
+                    {%for(var i=0;i< list.length;i++){%}
+                        <p class="lang ru-title">{%= list[i].title %}</p>
+                        <div class="rule-text">
+                            {%= list[i].content %}
+                        </div>
+                    {%}%}
+                </script>
+            </div>
+        </div>
+
+        <form class="form-box">
+            <div style="margin-bottom:10px;">
+                <span class="lang form-title"><span class="lang" key="Buy">購買</span>T19</span>
+                <span class="lang form-tip">*<span class="lang" key="Purchase">0.1ETH起購，兌換比例</span></span><span class="form-tip exchange-ratio">--</span>
+            </div>
+            
+            <input type="text" class="eth-num" id="purchase-num"><button type="button" class="lang submit" key="Send" onclick="ethPurchase()">发送</button>
+        </form>
+
+        <div class="statistics">
+            <p class="lang title" key="Statisticaldata">统计数据</p>
+            <p class="lang title2">STATISTICS</p>
+            <ul class="sta-box">
+                <li>
+                    <span class="lang" key="Incinerationrate">门票焚毁倍率</span>
+                    <span class="exchange-ratio">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Burnedtickets">已焚毁门票</span>
+                    <span class="burned-tickets">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Currentlevel">我的当前级别</span>
+                    <span class="lever-img current-level">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Directpush">我的直推</span>
+                    <span class="direct-push">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Fiveteam">我团队的五级玩家</span>
+                    <span class="five-team">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Nineteam">我团队的九级玩家</span>
+                    <span class="nine-team">--</span>
+                </li>
+                <li>
+                    <span class="lang" key="Totalnumber">我的团队总人数</span>
+                    <span class="total-number">-</span>
+                </li>
+                <li>
+                    <span class="lang" key="Gradelevel">我的级差级别</span>
+                    <span class="lever-img grade-level">--</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="home-footer">
+            <div class="lang copyright" key="Footer">
+                ©2019 Team 糖果派。版權所有。
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            noticeList(swiperList);
+            rules(rulesContent);
+            statistical();
+        })
+    </script>
+</body>
+</html>

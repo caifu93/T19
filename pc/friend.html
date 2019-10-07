@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/Eject.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/elastic.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/api.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <img src="images/logo.png">
+                <span class="lang" key="Title"></span>
+            </div>
+            <div>
+                <a href="home.html" class="lang go-home" key="Home"></a>
+                <div class="lang-box">
+                    <p class="selected-lang"><span>繁體中文</span><img src="images/more.png"></p>
+                    <ul class="select-lang">
+                        <li class="translate" id="fan">繁體中文</li>
+                        <li class="translate" id="en">English</li>
+                        <li class="translate" id="kor">한국어</li>
+                        <li class="translate" id="jp">日本語</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="contract-banner friend-banner">
+        <div class="cb-box">
+            <div>
+                <p class="lang name" key="Invitefriends">邀請好友</p>
+                <p class="vice-name">Invite friends</p>
+                <p class="line"></p>
+            </div>
+            <img src="images/yaoqingda.png">
+        </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="contract-nav">
+        <div class="wrap-content cn-box">
+            <div>
+                <img src="images/add.png">
+                <span class="lang" key="Home">首頁</span>
+                >
+                <span class="lang current" key="Invitefriends">邀請好友</span>
+            </div>
+            <div>
+                <a href="contract.html" class="lang" key="Pcontract">參與合約</a>
+                <a href="update.html" class="lang" key="WantUpdate">我要升級</a>
+                <a href="profti.html" class="lang" key="Myincome">我的收益</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表單 -->
+    <form class="wrap-content contract-form friend-form">
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Myinviter">我的邀請人</span>
+                <span class="name registered-referee">--</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Contactperson">我的接點人</span>
+                <span class="name2 contact-person">--</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Mydirectpushes">我的直推人數</span>
+                <span class="name2 mydirect-pushes">--</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Invitationlink">我的邀請鏈接</span>
+                <input class="name2 link-input" id="copy" value="" />
+            </div>
+        </div>
+        <p class="lang contract-send" key="Copyinvitationlink" onclick="copyMessage()">複製我的邀請鏈接</p>
+    </form>
+
+    <!-- 尾部 -->
+    <div class="lang footer" key="Footer">
+        ©2019 Team 糖果派。版權所有。
+    </div>
+
+    <script>
+        function copyMessage() {
+            var Url2 = document.getElementById("copy");
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            Ealt.Etoast(tipCopy, 1);
+        }
+
+        $(function() {
+            personRegistered();
+        })
+    </script>
+
+</body>
+</html>

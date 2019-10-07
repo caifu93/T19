@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/Eject.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.sPage.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/rem.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.sPage.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/elastic.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/eth.js"></script>
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 頭部 -->
+    <div class="profit-heder">
+        <div class="top">
+            <a href="home.html"><img src="images/back.png"></a>
+            <span class="lang" key="Income">收益</span>
+        </div>
+        <p class="gradation">
+            <span class="lang" key="Gradelevel">我的級差級別</span>
+            <span class="grade-level">--</span>
+        </p>
+        <p class="lang num-name">
+            <span class="lang" key="Numbercoins">平台幣數量</span>(T19)
+        </p>
+        <p class="num number-coins">--</p>
+    </div>
+
+    <!-- 內容 -->
+    <div class="profit-content">
+        <div class="table-header">
+            <span class="lang active" key="Pendingincome">待領取收益</span>
+            <span class="lang" key="Settlementrevenue">已結算收益</span>
+        </div>
+        <ul class="income">
+            <li>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang" key="NumberETH">ETH數量</th>
+                            <th class="lang" key="Incometype">收益類型</th>
+                            <th class="lang" key="Incometime">收益時間</th>
+                            <th class="lang" key="Needtickets">需支付門票</th>
+                            <th class="lang" key="Receive">領取</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cont"></tbody>
+                    <script type="text/html" id="temp">
+                        {%for(var i=0;i< list.length;i++){%}
+                            <tr>
+                                <td>{%=list[i].money%}</td>
+                                <td>{%=list[i].type%}</td>
+                                <td>{%=list[i].createTime%}</td>
+                                <td>{%=list[i].needT19%}</td>
+                                <td>
+                                    <span class="lang" onclick="incomeReceived({%=list[i].needT19%})" key="Receive">{%=list[i].operating%}</span> <!-- 领取 -->
+                                </td>
+                            </tr>
+                        {%}%}
+                    </script>
+                </table>
+
+                <div id="myPage1"></div>
+            </li>
+            <li class="settled">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang" key="NumberETH">ETH數量</th>
+                            <th class="lang" key="Incometype">收益類型</th>
+                            <th class="lang" key="Incometime">收益時間</th>
+                            <th class="lang" key="Settled">已結算</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cont2"></tbody>
+                    <script type="text/html" id="temp2">
+                        {%for(var i=0;i< list.length;i++){%}
+                            <tr>
+                                <td>{%=list[i].money%}</td>
+                                <td>{%=list[i].type%}</td>
+                                <td>{%=list[i].createTime%}</td>
+                                <td class="lang" key="Settled">{%=list[i].settled%}</td> <!-- 已結算 -->
+                            </tr>
+                        {%}%}
+                    </script>
+                </table>
+
+                <div id="myPage2"></div>
+                <div class="settled-fixed">
+                    <span class="lang" key="Totalsettled">已結算ETH總數量：</span>
+                    <span class="total-settled">--</span>ETH
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(function() {
+            // 切换收益类型
+            $(".table-header span").click(function() {
+                $(this).addClass("active").siblings().removeClass("active");
+                $(".income li").eq($(this).index()).show().siblings().hide();
+            });
+
+            // 我的级差级别
+            // if (localStorage.getItem("gradationLevel")) {
+            //     switch (localStorage.getItem("gradationLevel")) {
+            //         case "0":
+            //             $(".gradation img").attr("src", "images/v1.png");
+            //             break;
+            //         case "1":
+            //             $(".gradation img").attr("src", "images/v2.png");
+            //             break;
+            //         case "2":
+            //             $(".gradation img").attr("src", "images/v3.png");
+            //             break;
+            //         case "3":
+            //             $(".gradation img").attr("src", "images/v4.png");
+            //             break;
+            //         case "4":
+            //             $(".gradation img").attr("src", "images/v51.png");
+            //             break;
+            //     }
+            // }
+            statistical();
+            beneficial();
+
+            profitList({
+                status: 1,
+                pageNumber: page1.pageNumber,
+                pageSize: page1.pageSize
+            }, showList1);
+            
+            profitList({
+                status: 2,
+                pageNumber: page2.pageNumber,
+                pageSize: page2.pageSize
+            }, showList2);
+        })
+    </script>
+</body>
+</html>

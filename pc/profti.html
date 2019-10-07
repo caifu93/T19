@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/Eject.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.sPage.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.sPage.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/elastic.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/eth.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <img src="images/logo.png">
+                <span class="lang" key="Title"></span>
+            </div>
+            <div>
+                <a href="home.html" class="lang go-home" key="Home"></a>
+                <div class="lang-box">
+                    <p class="selected-lang"><span>繁體中文</span><img src="images/more.png"></p>
+                    <ul class="select-lang">
+                        <li class="translate" id="fan">繁體中文</li>
+                        <li class="translate" id="en">English</li>
+                        <li class="translate" id="kor">한국어</li>
+                        <li class="translate" id="jp">日本語</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="contract-banner friend-banner">
+        <div class="cb-box">
+            <div>
+                <p class="lang name" key="Myincome">我的收益</p>
+                <p class="vice-name">My income</p>
+                <p class="line"></p>
+            </div>
+            <img src="images/yaoqingda.png">
+        </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="contract-nav">
+        <div class="wrap-content cn-box">
+            <div>
+                <img src="images/add.png">
+                <span class="lang" key="Home">首頁</span>
+                >
+                <span class="lang current" key="Myincome">我的收益</span>
+            </div>
+            <div>
+                <a href="contract.html" class="lang" key="Pcontract">參與合約</a>
+                <a href="update.html" class="lang" key="WantUpdate">我要升級</a>
+                <a href="friend.html" class="lang" key="Invitefriends">邀請好友</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 收益 -->
+    <div class="wrap-content profit">
+        <div class="profit-top">
+            <p>
+                <span class="lang" key="Gradelevel">我的級差級別</span>
+                <span class="value gradationLevel grade-level">--</span>
+            </p>
+            <p>
+                <span class="lang" key="Numbercoins">平台幣數量</span>(T19)
+                <span class="value number-coins">--</span>
+            </p>
+        </div>
+        <ul class="income">
+            <li>
+                <p class="lang title" key="Pendingincome">待領取收益</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang" key="NumberETH">ETH數量</th>
+                            <th class="lang" key="Incometype">收益類型</th>
+                            <th class="lang" key="Incometime">收益時間</th>
+                            <th class="lang" key="Needtickets">需支付門票</th>
+                            <th class="lang" key="Receive">領取</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cont"></tbody>
+                    <script type="text/html" id="temp">
+                        {%for(var i=0;i< list.length;i++){%}
+                            <tr>
+                                <td>{%=list[i].money%}</td>
+                                <td>{%=list[i].type%}</td>
+                                <td>{%=list[i].createTime%}</td>
+                                <td>{%=list[i].needT19%}</td>
+                                <td>
+                                    <span class="lang" onclick="incomeReceived({%=list[i].needT19%}, {%=list[i].id%})">{%=list[i].operating%}</span> <!-- 领取 --> 
+                                </td>
+                            </tr>
+                        {%}%}
+                    </script>
+                </table>
+
+                <div id="myPage1"></div>
+            </li>
+            <li class="settled">
+                <p class="lang title" key="Settlementrevenue">已結算收益</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="lang" key="NumberETH">ETH數量</th>
+                            <th class="lang" key="Incometype">收益類型</th>
+                            <th class="lang" key="Incometime">收益時間</th>
+                            <th class="lang" key="Settled">已結算</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cont2"></tbody>
+                    <script type="text/html" id="temp2">
+                        {%for(var i=0;i< list.length;i++){%}
+                            <tr>
+                                <td>{%=list[i].money%}</td>
+                                <td>{%=list[i].type%}</td>
+                                <td>{%=list[i].createTime%}</td>
+                                <td>{%=list[i].settled%}</td> <!-- 已結算 -->
+                            </tr>
+                        {%}%}
+                    </script>
+                </table>
+
+                <div id="myPage2"></div>
+            </li>
+        </ul>
+        <div class="settled-bottom">
+            <span class="lang" key="Totalsettled">
+                已結算ETH總數量：
+            </span>
+            <span class="total-settled">--</span>ETH
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="lang footer" key="Footer">
+        ©2019 Team 糖果派。版權所有。
+    </div>
+
+    <script>
+        $(function() {
+            // 我的级差级别
+            // if (localStorage.getItem("gradationLevel")) {
+            //     gradation(localStorage.getItem("gradationLevel"));
+            // }
+            statistical();
+            beneficial();
+
+            profitList({
+                status: 1,
+                pageNumber: page1.pageNumber,
+                pageSize: page1.pageSize
+            }, showList1);
+           
+            profitList({
+                status: 2,
+                pageNumber: page2.pageNumber,
+                pageSize: page2.pageSize
+            }, showList2);
+        })
+    </script>
+
+</body>
+</html>

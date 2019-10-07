@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC智能合约</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/eth.js"></script>
+</head>
+<body>
+    <script>
+        // window.invitationCode = getQueryString("invitationCode");
+        localStorage.setItem("invitationCode", 1234567890)
+
+        localStorage.removeItem("isRegister");
+        localStorage.removeItem("ncc-isLogin");
+        localStorage.removeItem("ncc-token");
+
+        login({walletPath: web3.eth.accounts[0]});
+        if (/Android|webOS|iPhone|iPod|BlackBerry/g.test(navigator.userAgent)) {
+            window.location.href = "T19/h5/home.html";
+        } else {
+            window.location.href = "T19/pc/home.html";
+        }
+    </script>
+</body>
+</html>

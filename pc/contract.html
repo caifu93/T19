@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/Eject.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/elastic.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/eth.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-wrap">
+            <div class="logo">
+                <img src="images/logo.png">
+                <span class="lang" key="Title"></span>
+            </div>
+            <div>
+                <a href="home.html" class="lang go-home" key="Home"></a>
+                <div class="lang-box">
+                    <p class="selected-lang"><span>繁體中文</span><img src="images/more.png"></p>
+                    <ul class="select-lang">
+                        <li class="translate" id="fan">繁體中文</li>
+                        <li class="translate" id="en">English</li>
+                        <li class="translate" id="kor">한국어</li>
+                        <li class="translate" id="jp">日本語</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="contract-banner">
+        <div class="cb-box">
+            <div>
+                <p class="lang name" key="Pcontract">參與合約</p>
+                <p class="vice-name">Participate in the contract</p>
+                <p class="line"></p>
+            </div>
+            <img src="images/canyubig.png">
+        </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="contract-nav">
+        <div class="wrap-content cn-box">
+            <div>
+                <img src="images/add.png">
+                <span class="lang" key="Home">首頁</span>
+                >
+                <span class="lang current" key="Pcontract">參與合約</span>
+            </div>
+            <div>
+                <a href="update.html" class="lang" key="WantUpdate">我要升級</a>
+                <a href="friend.html" class="lang" key="Invitefriends">邀請好友</a>
+                <a href="profti.html" class="lang" key="Myincome">我的收益</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表單 -->
+    <form class="wrap-content contract-form">
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Registeredreferee">註冊推薦人</span>
+                <span class="name registered-referee">--</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="flex-item">
+                <span class="lang" key="Contactperson">我的接點人</span>
+                <span class="name2 contact-person">--</span>
+            </div>
+        </div>
+        <div class="item">
+            <span class="lang" key="Amountinput">ETH金額輸入</span>
+            <input type="text" value="" readonly id="partin-contract">
+            <input type="hidden" value="" readonly id="partin-ticket">
+            <input type="hidden" value="" readonly id="partin-trans">
+            <input type="hidden" value="" readonly id="partin-destruction">
+        </div>
+        <!-- <div class="item">
+            <span class="lang" key="RequiredT19">所需T19</span>
+            <input type="text" id="T-19" readonly>
+        </div> -->
+        <input type="hidden" id="contarct-destruction" value="">
+        <button type="button" class="lang contract-send" key="Send" onclick="admission()">发送</button>
+    </form>
+
+    <!-- 尾部 -->
+    <div class="lang footer" key="Footer">
+        ©2019 Team 糖果派。版權所有。
+    </div>
+
+    <script>
+        $(function() {
+            personRegistered();
+        })
+    </script>
+</body>
+</html>

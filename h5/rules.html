@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/rem.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/eth.js"></script>
+    <style>
+        body {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航頭 -->
+    <div class="nav-header">
+        <a href="home.html">
+            <img src="images/back.png">
+        </a>
+        <span class="lang">參與規則</span>
+    </div>
+
+    <div class="wrap-content rules-content" id="cont">
+        <script type="text/html" id="temp">
+            {%for(var i=0;i< list.length;i++){%}
+                <p class="lang title">{%= list[i].title %}</p>
+                <div class="content">
+                    {%= list[i].content %}
+                </div>
+            {%}%}
+        </script>
+    </div>
+
+    <script>
+        // 规则
+        function rulesContent(res) {
+            if (res.code == "2222") {
+                jo.reTpl(
+                $("#temp"), {
+                    list: res.data
+                },
+                $("#cont")
+            );
+            }
+        }
+
+        $(function() {
+            rules(rulesContent);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 1.28rem;
+    line-height: 0.89rem;
+    padding: 0 0.3rem;
+}
+.wrap-content {
+    padding: 0 0.2rem;
+}
+.logo img {
+    width: 0.78rem;
+    height: 0.9rem;
+    vertical-align: text-bottom;
+}
+.logo .name {
+    color: #064aa0;
+    font-size: 0.5rem;
+}
+.language {
+    position: relative;
+    cursor: pointer;
+}
+.language p span {
+    font-size: 0.4rem;
+    color: #064aa0;
+}
+.language p img {
+    font-size: 0.4rem;
+    color: #064aa0;
+    width: 0.28rem;
+    margin-left: 0.1rem;
+}
+.fixed-lang {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+.select-lang {
+    position: absolute;
+    width: 2.83rem;
+    top: 1.13rem;
+    right: 0.2rem;
+    background: #0485d2;
+    color: #fff;
+    font-size: 0.24rem;
+    z-index: 9;
+}
+.select-lang li {
+    text-align: center;
+}
+
+/* 公用到航頭 */
+.nav-header {
+    height: 1.28rem;
+    line-height: 1.28rem;
+    color: #fff;
+    font-size: 0.32rem;
+    background: #03A0E8;
+    text-align: center;
+    position: relative;
+}
+.nav-header img {
+    width: 0.2rem;
+    height: 0.36rem;
+    position: absolute;
+    top: 0.45rem;
+    left: 0.2rem;
+}
+
+/* 首頁 */
+.banner {
+    background: url("../images/banner.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 3.4rem;
+    text-align: center;
+}
+.banner h1 {
+    color:  #fff;
+    font-size: 0.48rem;
+    padding-top: 0.68rem;
+}
+.banner h3 {
+    color: #B7E7E9;
+    font-size: 0.24rem;
+    margin-top: 0.15rem;
+}
+.banner p {
+    height: 0.2rem;
+    line-height: 0;
+}
+.banner p span {
+    color: #B7E7E9;
+    font-size: 0.17rem;
+}
+.banner p img {
+    width: 0.1rem;
+    height: 0.2rem;
+    position: relative;
+    top: 0.03rem;
+}
+.notice {
+    width: 7.1rem;
+    height: 0.59rem;
+    line-height: 0;
+    background: url("../images/swiper.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0.3rem auto 0.35rem auto;
+}
+.notice > img {
+    width: 0.41rem;
+    height: 0.35rem;
+    margin: 0.11rem 0 0 0.18rem;
+}
+.notice .swiper-container {
+    width: 6.15rem;
+    height: 0.59rem;
+    font-size: 0.22rem;
+    line-height: 0;
+    color: #fff;
+    overflow: hidden;
+    margin-left: 0.78rem;
+    margin-top: -0.45rem;
+}
+.notice .swiper-slide {
+    height: 0.59rem!important;
+    line-height: 0.59rem;
+    overflow: hidden;
+    margin-top: -0.01rem;
+}
+.fourth-box {
+    display: flex;
+    justify-content: space-between;
+}
+.fourth-box li a {
+    display: block;
+    width: 1.63rem;
+    height: 1.82rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 0.12rem;
+    box-shadow: 0px 0px 12px 0px rgba(0,12,27,0.14);
+}
+.fourth-box li a p {
+    font-size: 0.22rem;
+    color: #333;
+    margin-top: 0.14rem;
+}
+.fourth-box li a img {
+    max-width: 1.23rem;
+    max-height: 0.77rem;
+    margin-top: 0.3rem;
+}
+.rules {
+    margin-top: 0.45rem;
+}
+.rules .top {
+    display: flex;
+    justify-content: space-between;
+}
+.rules .top div {
+    height: 0.32rem;
+    line-height: 0;
+}
+.rules .top img {
+    width: 0.28rem;
+    height: 0.28rem;
+    vertical-align: top;
+    position: relative;
+    top: -0.13rem;
+}
+.rules .top span {
+    font-size: 0.28rem;
+    color: #333333;
+    vertical-align: top;
+}
+.rules .top tt {
+    margin-left: -0.1rem;
+}
+.rules .top .more span {
+    font-size: 0.24rem;
+    color: #072984;
+}
+.rules .content {
+    width: 7.1rem;
+    height: 1.84rem;
+    padding: 0.23rem 0.2rem;
+    font-size: 0.24rem;
+    background: #0485D2;
+    border-radius: 0.12rem;
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 0.3rem;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+.statistics {
+    background: url("../images/bg.png") no-repeat;
+    background-size: 100% 100%;
+    height: 5.55rem;
+    width: 7.1rem;
+    margin: 0.42rem auto 0 auto;
+    margin-top: 0.42rem;
+}
+.statistics .title {
+    text-align: center;
+    font-size: 0.32rem;
+    color: #009DF4;
+    background-image:-webkit-linear-gradient(right,#009DF4,#00E9D0); 
+    -webkit-background-clip:text; 
+    -webkit-text-fill-color:transparent;
+    padding-top: 0.3rem;
+}
+.statistics .title2 {
+    text-align: center;
+    font-size: 0.22rem;
+    color: #00BEF7;
+    margin-bottom: 0.22rem;
+    margin-top: 0.12rem;
+}
+.statistics .sta-box {
+    width: 6.4rem;
+    height: 3.9rem;
+    background: url("../images/bantouming-bg.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 0.27rem;
+    margin: 0 auto;
+}
+.statistics .sta-box li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.22rem;
+    color: #fff;
+    line-height: 0.43rem;
+}
+.lever-img img {
+    width: 0.43rem;
+    position: relative;
+    left: 0.1rem;
+}
+.edition {
+    font-size: 0.18rem;
+    color: #B7B7B7;
+    text-align: center;
+    margin: 0.42rem auto 0.3rem auto;
+}
+
+/* 參與規則 */
+.rules-content .title {
+    color: #333;
+    font-size: 0.28rem;
+    margin-top: 0.43rem;
+    margin-bottom: 0.2rem;
+}
+.rules-content .content {
+    min-height: 4.3rem;
+    color: #666;
+    background: #fff;
+    padding: 0.3rem;
+    border-radius: 0.12rem;
+    font-size: 0.26rem;
+    word-break: break-all;
+    line-height: 0.35rem;
+}
+
+/* 參與合約、邀請、升級 */
+.contract-content {
+    height: calc(100% - 1.28rem);
+    display: flex;
+    flex-direction: column;
+}
+.contract-content > div {
+    height: 0.9rem;
+    padding: 0 0.2rem;
+    line-height: 0.9rem;
+    font-size: 0.28rem;
+    color: #333;
+    background: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 0.1rem;
+}
+.contract-content > div .lang {
+    padding-right: 0.1rem;
+}
+.contract-content > div .cc {
+    color: #666666;
+}
+.cc.lever-img img {
+    width: 0.8rem;
+    position: relative;
+    left: 0.1rem;
+    top: 0.15rem;
+}
+.contract-content > div .cc1 {
+    color: #00B515;
+}
+.contract-content > div .cc2 {
+    color: #666;
+}
+.contract-content > div.copy-box {
+    display: flex;
+}
+.contract-content > div.copy-box .lang {
+    padding-right: 0.2rem;
+}
+.contract-content > div.copy-box .copy-input {
+    flex: 1;
+    outline: 0;
+    border: 0;
+    font-size: 0.28rem;
+    vertical-align: text-bottom;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.contract-content > form {
+    flex: 1;
+    text-align: center;
+    color: #333;
+    font-size: 0.28rem;
+    padding: 0.26rem 0.2rem 0 0.2rem;
+    background: #fff;
+    margin-top: 0.2rem;
+}
+.contract-content > form .name {
+    text-align: left;
+}
+.contract-content > form input {
+    width: 100%;
+    height: 0.69rem;
+    padding-left: 0.1rem;
+    font-size: 0.28rem;
+    outline: 0;
+    border: 1px solid rgba(153,153,153,1);
+    border-radius: 0.06rem;
+    color: #999;
+    box-sizing: border-box;
+    margin-top: 0.2rem;
+}
+.contract-content button {
+    width: 3.98rem;
+    height: 0.77rem;
+    font-size: 0.28rem;
+    color: #fff;
+    outline: 0;
+    border: 0;
+    background: url("../images/send.png") no-repeat;
+    background-size: 100% 100%;
+    /* margin-top: 0.88rem; */
+    margin: 0.88rem auto 0 auto;
+}
+.update > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 我的收益 */
+.profit-heder {
+    height: 4.03rem;
+    color: #fff;
+    background: url("../images/bg3.png") no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.32rem;
+    position: relative;
+    margin-bottom: 0.2rem;
+}
+.profit-heder .top {
+    height: 1.28rem;
+    line-height: 1.28rem;
+    font-size: 0.32rem;
+    text-align: center;
+}
+.profit-heder .top img {
+    width: 0.2rem;
+    height: 0.36rem;
+    position: absolute;
+    top: 0.45rem;
+    left: 0.2rem;
+}
+.profit-heder .gradation {
+    padding-left: 0.2rem;
+    margin-top: 0.1rem;
+}
+.profit-heder .gradation img {
+    width: 0.66rem;
+    height: 0.56rem;
+    vertical-align: middle;
+    position: relative;
+    top: -0.03rem;
+}   
+.profit-heder .num-name {
+    font-size: 0.22rem;
+    padding-left: 0.88rem;
+    margin-top: 0.4rem;
+}   
+.profit-heder .num {
+    font-size: 0.62rem;
+    padding-left: 0.88rem;
+    margin-top: 0.3rem;
+}   
+.profit-content {
+    background: #fff;
+    overflow: auto;
+}
+.profit-content .table-header {
+    width: 100%;
+    height: 0.85rem;
+    line-height: 0.85rem;
+    color: #666666;
+    font-size: 0.32rem;
+    border-bottom: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+}
+.profit-content .table-header span {
+    width: 50%;
+    text-align: center;
+}
+.profit-content .table-header span.active {
+    color: #fff;
+    background: #009CE4;
+}
+.profit-content .income {
+    /* min-width: 5.85rem; */
+}
+.profit-content .income li {
+    text-align: center;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.profit-content .income li table,  .profit-content .income li table tr {
+    display: block;
+    width: 9rem; 
+}
+.profit-content .income li table {
+    overflow: auto;
+}
+.profit-content .income li table thead {
+    display: block;
+    width: 10.15rem;
+    white-space: nowrap;
+    border-bottom: 1px solid #eaeaea;
+}
+.profit-content .income li table th {
+    color: #666;
+    font-size: 0.26rem;
+    height: 0.84rem;
+    line-height: 0.84rem;
+    width: 1.8rem;
+    display: inline-block;
+}
+.profit-content .income li table tbody {
+    display: block;
+    width: 10.15rem;
+    height: 8.25rem;
+    white-space: nowrap;
+    overflow: auto;
+    background: #fff;
+}
+.profit-content .income li table tbody tr {
+    height: 0.65rem;
+    line-height: 0.65rem;
+}
+.profit-content .income li table tbody td {
+    display: inline-block;
+    width: 1.8rem;
+    height: 0.55rem;
+    line-height: 0.55rem;
+    font-size: 0.24rem;
+}
+.profit-content .income li table tbody td .lang {
+    display: inline-block;
+    width: 0.86rem;
+    height: 0.35rem;
+    line-height: 0.35rem;
+    color: #009ce4;
+    border: 1px solid #009ce4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.profit-content .settled {
+    display: none;
+}
+#myPage2 {
+    margin-bottom: 0.93rem;
+}
+.settled-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.93rem;
+    /* text-align: left; */
+    line-height: 0.93rem;
+    /* padding-left: 0.3rem; */
+    background: #f5f5f5;
+    font-size: 0.26rem;
+    color: #666;
+    z-index: 999;
+}
+
+/* 尾部 */
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: #fff;
+    border-top: 1px solid #E9E9E9;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.footer a {
+    display: block;
+    width: 50%;
+    height: 1.2rem;
+    color: #AFAFAF;
+    font-size: 0.16rem;
+    text-align: center;
+}
+.footer a.active {
+    background: #E9E9E9;
+    color: #002673;
+}
+.footer a img {
+    width: 0.44rem;
+    height: 0.44rem;
+    margin: 0.15rem 0;
+}
+
+/* 購買T19 */
+.purchase-header {
+    text-align: center;
+    height: 1.28rem;
+    line-height: 1.28rem;
+    font-size: 0.32rem;
+    color: #fff;
+    background: #03A0E8;
+}
+.purchase-form .tip {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.28rem;
+    color: #333;
+    border-bottom: 1px solid #E9E9E9;
+    margin-top: 0.2rem;
+}
+.purchase-form .num-name {
+    font-size: 0.28rem;
+    color: #666666;
+}
+.purchase-form input {
+    outline: 0;
+    border: 1px solid #999999;
+    width: 3rem;
+    height: 0.48rem;
+    padding-left: 0.3rem;
+    color: #999;
+    font-size: 0.28rem;
+    border-radius: 0.06rem;
+    vertical-align: baseline;
+}
+.purchase-form button {
+    display: block;
+    outline: 0;
+    border: 0;
+    width: 4.82rem;
+    height: 0.65rem;
+    font-size: 0.28rem;
+    color: #fff;
+    background: url("../images/send.png") no-repeat;
+    background-size: 100% 100%;
+    margin: 0.68rem auto 0 auto;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NCC</title>
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/rem.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/lang.js"></script>
+    <script src="js/header.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/eth.js"></script>
+    <style>
+        body {
+            padding-bottom: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo.png">
+            <span class="lang name" key="Title"></span>
+        </div>
+        <div class="language">
+            <p class="selected-lang"><span>繁體中文</span><img src="images/qiehuan.png"></p>
+            <div class="fixed-lang">
+                <ul class="select-lang">
+                    <li class="translate" id="fan">繁體中文</li>
+                    <li class="translate" id="en">English</li>
+                    <li class="translate" id="kor">한국어</li>
+                    <li class="translate" id="jp">日本語</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <h1 class="lang" key="Title">糖果派</h1>
+        <h3>Candy pie</h3>
+        <p>
+            <img src="images/sanjiaoxing.png">
+            <span>Starting at 2019.04.09</span>
+            <img src="images/sanjiaoxing_right.png">
+        </p>
+    </div>
+
+    <!-- 公告 -->
+    <div class="notice">
+        <img src="images/notice.png">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="cont1"></div>
+            <script type="text/html" id="temp1">
+                {%for(var i=0;i< list.length;i++){%}
+                    <div class="swiper-slide">{%= list[i] %}</div>
+                {%}%}
+            </script>
+        </div>
+    </div>
+
+    <!-- 鏈接頁面 -->
+    <ul class="wrap-content fourth-box">
+        <li>
+            <a href="contract.html">
+                <img src="images/canyuheyue.png">
+                <p class="lang" key="Pcontract">參與合約</p>
+            </a>
+        </li>
+        <li>
+            <a href="update.html">
+                <img src="images/wodeshouyi.png">
+                <p class="lang" key="WantUpdate">我要升級</p>
+            </a>
+        </li>
+        <li>
+            <a href="friend.html">
+                <img src="images/yaoqinghaoyou.png">
+                <p class="lang" key="Invitefriends">邀請好友</p>
+            </a>
+        </li>
+        <li>
+            <a href="profit.html">
+                <img src="images/wodeshouyi.png">
+                <p class="lang" key="Myincome">我的收益</p>
+            </a>
+        </li>
+    </ul>
+
+    <!-- 規則 -->
+    <div class="wrap-content rules">
+        <div class="top">
+            <div>
+                <img src="images/shuoming.png">
+                <span class="lang tt" key="Ruledescription">規則說明</span>
+            </div>
+            <div class="more">
+                <a href="rules.html"> 
+                    <span class="lang" key="Seemore">查看更多</span><span>>></span>
+                </a>
+            </div>
+        </div>
+        <div class="content"></div>
+    </div>
+
+    <!-- 統計數據 -->
+    <div class="wrap-content statistics">
+        <p class="lang title" key="Statisticaldata">统计数据</p>
+        <p class="lang title2">STATISTICS</p>
+        <ul class="sta-box">
+            <li>
+                <span class="lang" key="Incinerationrate">门票焚毁倍率</span>
+                <span class="exchange-ratio">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Burnedtickets">已焚毁门票</span>
+                <span class="burned-tickets">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Currentlevel">我的当前级别</span>
+                <span class="lever-img current-level">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Directpush">我的直推</span>
+                <span class="direct-push">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Fiveteam">我团队的五级玩家</span>
+                <span class="five-team">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Nineteam">我团队的九级玩家</span>
+                <span class="nine-team">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Totalnumber">我的团队总人数</span>
+                <span class="total-number">--</span>
+            </li>
+            <li>
+                <span class="lang" key="Gradelevel">我的级差级别</span>
+                <span class="lever-img grade-level">--</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 版本信息 -->
+    <div class="lang edition" key="Footer">
+        ©2019 Team 糖果派。版權所有。
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer">
+        <a href="javascript:void(0)" class="active">
+            <img src="images/home_pre.png">
+            <p class="lang" key="Home">首頁</p>
+        </a>
+        <a href="purchase.html">
+            <img src="images/goumai-nor.png">
+            <p class="lang" key="Buy">購買T19</p>
+        </a>
+    </div>
+
+    <script>
+        $(function() {
+            noticeList(swiperListH5);
+            rules(rulesContentH5);
+            statistical();
+        })
+    </script>
+</body>
+</html>
