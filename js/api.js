@@ -1,5 +1,5 @@
-// var base_url = "http://47.52.216.38:9538";
-var base_url = "http://192.168.1.130:8081";
+var base_url = "http://47.52.216.38:9538";
+// var base_url = "http://192.168.1.130:8081";
 var headers = {
     Authorization: localStorage.getItem("ncc-token"),
     language: localStorage.getItem("lang") || "fan"
