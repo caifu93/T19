@@ -1,5 +1,5 @@
 // var base_url = "http://47.52.216.38:9538";  // 服务器
-var base_url = "http://www.candy19.top";       // GitHub
+var base_url = "https://www.candy19.top";       // GitHub
 // var base_url = "http://192.168.1.130:8081";
 var headers = {
     Authorization: localStorage.getItem("ncc-token"),
