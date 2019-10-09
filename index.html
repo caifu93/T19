@@ -15,8 +15,7 @@
 </head>
 <body>
     <script>
-        localStorage.setItem = getQueryString("invitationCode");
-        // localStorage.setItem("invitationCode", 1234567890)
+        localStorage.setItem("invitationCode", getQueryString("invitationCode"));
 
         localStorage.removeItem("isRegister");
         localStorage.removeItem("ncc-isLogin");
@@ -25,6 +24,10 @@
         // console.log(web3)
 
         if (typeof web3 !== 'undefined') {
+            register({
+                invitationCode: localStorage.getItem("invitationCode"),
+                walletPath: web3.eth.accounts[0]
+            })
             login({walletPath: web3.eth.accounts[0]});
         }
         

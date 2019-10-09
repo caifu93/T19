@@ -589,7 +589,7 @@ var abitoken = [
 ]
 
 // eth地址
-var contract_address = '0x799762e5E57c4a4EF145A4A01C639cC8C4D3928f';
+var contract_address = '0x04EEb259aC65b14Ad8ba9bA34665D41e79B0425f';
 
 var contract;
 // init contract
