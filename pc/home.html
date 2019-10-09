@@ -162,7 +162,7 @@
 
         <div class="home-footer">
             <div class="lang copyright" key="Footer">
-                ©2019 Team 糖果派。版權所有。
+                ©2019 Team 糖果派 版權所有 
             </div>
         </div>
     </div>
@@ -172,6 +172,9 @@
             noticeList(swiperList);
             rules(rulesContent);
             statistical();
+            setInterval(function() {
+                statistical();
+            }, 6000)
         })
     </script>
 </body>

@@ -780,6 +780,7 @@ window.addEventListener('load', function () {
 				// 参与合约所需T19
 				var num = new Number(result).toLocaleString().replace(/,/g, "")/Math.pow(10, 18);
 				var bili = accMul(1.1, num)
+				// console.log(result)
 				// $("#T-19").val(bili)
 				$(".exchange-ratio").html("1:" + num);
 			} else {
@@ -790,6 +791,40 @@ window.addEventListener('load', function () {
 				})
 			}
 		});
+
+		// 获取统计数据
+		contract.getInfOfCtt({ from: account }, function (error, result) {
+			if (!error) {
+				// console.log(result)
+				// 参与合约所需T19
+				var num = new Number(result[3]).toLocaleString().replace(/,/g, "")/Math.pow(10, 18);
+				$(".burned-tickets").html(num);
+			} else {
+				// bcAlertBox(error);
+				Ealt.Ealert({
+					title:'Tips',
+					message: error
+				})
+			}
+		});
+
+		setInterval(function() {
+			// 获取统计数据
+			contract.getInfOfCtt({ from: account }, function (error, result) {
+				if (!error) {
+					// console.log(result)
+					// 参与合约所需T19
+					var num = new Number(result[3]).toLocaleString().replace(/,/g, "")/Math.pow(10, 18);
+					$(".burned-tickets").html(num);
+				} else {
+					// bcAlertBox(error);
+					Ealt.Ealert({
+						title:'Tips',
+						message: error
+					})
+				}
+			});
+		})
 		
 		// 平台币剩余总量
 		contract.totalSupply({ from: account }, function (error, result) {

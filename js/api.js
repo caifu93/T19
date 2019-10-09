@@ -16,6 +16,7 @@ function register(data) {
         success: function(res) {
             if (res.code == "2222" || res.code == "1009") {
                 localStorage.setItem("isRegister", true);
+                login(data)
             }
         }
     })
@@ -34,6 +35,7 @@ function login(data) {
                 localStorage.setItem("ncc-token", res.data.token);
                 localStorage.setItem("vipLevel", res.data.vipLevel);
                 localStorage.setItem("gradationLevel", res.data.gradationLevel);
+                window.location.reload();
             }
         }
     })
@@ -257,7 +259,7 @@ function statistical() {
         data: {},
         success: function (res) {
             if (res.code == "2222") {
-                $(".burned-tickets").html(res.data.destructionNum);
+                // $(".burned-tickets").html(res.data.destructionNum);
                 $(".direct-push").html(res.data.directTeamCount);
                 $(".five-team").html(res.data.teamFiveLevelCount);
                 $(".nine-team").html(res.data.teamNineLevelCount);
