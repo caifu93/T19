@@ -1,6 +1,6 @@
 // var base_url = "http://47.52.216.38:9538";  // 服务器
 var base_url = "https://www.candy19.top";       // GitHub
-// var base_url = "http://192.168.1.130:8081";
+// var base_url = "http://192.168.1.139:8081";
 var headers = {
     Authorization: localStorage.getItem("ncc-token"),
     language: localStorage.getItem("lang") || "fan"
@@ -171,7 +171,7 @@ function admissionHash(hash) {
     $.ajax({
         headers: headers,
         url: base_url + "/jansse/user/join",
-        type: "get",
+        type: "post",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify({
             hash: hash
