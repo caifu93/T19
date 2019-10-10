@@ -886,6 +886,7 @@ function getChange() {
         if (web3.eth.accounts[0] != localStorage.getItem("ncc-account")) {
             times = 2;
 			account = web3.eth.accounts[0];
+			// localStorage.clear();
 			localStorage.setItem("ncc-account", web3.eth.accounts[0])
 			// console.log(web3.eth.accounts[0]);
 
