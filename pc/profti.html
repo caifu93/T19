@@ -103,8 +103,8 @@
                             <tr>
                                 <td>{%=list[i].money%}</td>
                                 <td>{%=list[i].type%}</td>
-                                <td>{%=list[i].createTime%}</td>
-                                <td>{%=list[i].needT19%}</td>
+                                <td style="font-size:13px;">{%=list[i].createTime%}</td>
+                                <td style="align:right;">{%=list[i].needT19%}</td>
                                 <td>
                                     <span class="lang" onclick="incomeReceived({%=list[i].needT19%}, {%=list[i].id%})">{%=list[i].operating%}</span> <!-- 领取 --> 
                                 </td>
@@ -132,7 +132,7 @@
                             <tr>
                                 <td>{%=list[i].money%}</td>
                                 <td>{%=list[i].type%}</td>
-                                <td>{%=list[i].createTime%}</td>
+                                <td style="font-size:13px;">{%=list[i].createTime%}</td>
                                 <td>{%=list[i].settled%}</td> <!-- 已結算 -->
                             </tr>
                         {%}%}
