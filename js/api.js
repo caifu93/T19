@@ -321,7 +321,7 @@ function beneficial() {
 }
 
 // 领取收益  能否领取
-function incomeReceived(id, value) {
+function incomeReceived(value, id) {
     $.ajax({
         headers: headers,
         url: base_url + "/jansse/detail/isReceive",
