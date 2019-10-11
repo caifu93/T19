@@ -1,5 +1,5 @@
-// var base_url = "http://47.52.216.38:9538";  // 服务器
-var base_url = "https://www.candy19.top";       // GitHub
+var base_url = "http://47.52.216.38:9538";  // 服务器
+// var base_url = "https://www.candy19.top";       // GitHub
 // var base_url = "http://192.168.1.139:8081";
 var headers = {
     Authorization: localStorage.getItem("ncc-token"),
@@ -399,6 +399,30 @@ function passHash(data) {
         success: function (res) {
             if (res.code == "2222") {
                 Ealt.Etoast(tipOperating, 1);
+            } else {
+                Ealt.Ealert({
+                    title: tipTitle,
+                    message: res.message
+                })
+            }
+        }
+    })
+}
+
+// 能否邀请好友
+function inviteFriends() {
+    $.ajax({
+        headers: headers,
+        url: base_url + "/jansse/user/isInvitation",
+        contentType: "application/json;charset=utf-8",
+        type: "get",
+        data: {},
+        success: function (res) {
+            if (res.code == "2222") {
+                var Url2 = document.getElementById("copy");
+                Url2.select(); // 选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                Ealt.Etoast(tipCopy, 1);
             } else {
                 Ealt.Ealert({
                     title: tipTitle,
