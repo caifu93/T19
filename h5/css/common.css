@@ -489,6 +489,8 @@
 }
 .profit-content .income li table tbody td:nth-child(3) {
     width: 1.8rem;
+    white-space: normal;
+    line-height: 1;
 }
 .profit-content .income li table tbody td:nth-child(4) {
     width: 1.23rem;
