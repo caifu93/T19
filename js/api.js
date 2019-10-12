@@ -351,7 +351,7 @@ function incomeReceived(value, id) {
 }
 
 // 领取收益  领取hash
-function incomeReceivedHash(hash, id) {
+function incomeReceivedHash(hash, id, value) {
     $.ajax({
         headers: headers,
         url: base_url + "/jansse/detail/receive",
@@ -359,7 +359,8 @@ function incomeReceivedHash(hash, id) {
         type: "post",
         data: JSON.stringify({
             id: id,
-            hash: hash
+            hash: hash,
+            needT19: value
         }),
         success: function (res) {
             if (res.code == "2222") {
