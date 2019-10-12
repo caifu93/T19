@@ -698,7 +698,7 @@ function destruction(value, callback, id) {
 	contract.burn(etherValue, (function (error, result) {
         if (!error) {
 			// console.log(JSON.stringify(result));
-			callback(result, id);
+			callback(result, id, value);
         } else {
             Ealt.Ealert({
 				title:'Tips',

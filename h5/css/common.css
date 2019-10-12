@@ -196,7 +196,7 @@
     color: #fff;
     word-wrap: break-word;
     line-height: 0.3rem;
-    overflow: hidden;
+    overflow: auto;
     margin-top: 0.3rem;
 }
 .statistics {
@@ -433,18 +433,18 @@
 .profit-content .income li {
     text-align: center;
     box-sizing: border-box;
-    overflow: auto;
+    /* overflow: auto; */
 }
 .profit-content .income li table,  .profit-content .income li table tr {
     display: block;
-    width: 9rem; 
+    /* width: 9rem;  */
 }
 .profit-content .income li table {
-    overflow: auto;
+    /* overflow: auto; */
 }
 .profit-content .income li table thead {
     display: block;
-    width: 10.15rem;
+    /* width: 10.15rem; */
     white-space: nowrap;
     border-bottom: 1px solid #eaeaea;
 }
@@ -453,15 +453,27 @@
     font-size: 0.26rem;
     height: 0.84rem;
     line-height: 0.84rem;
-    width: 1.8rem;
+    width: 1.1rem;
     display: inline-block;
+}
+.profit-content .income li table th:nth-child(3) {
+    width: 1.8rem;
+}
+.profit-content .income li table th:nth-child(4) {
+    width: 1.23rem;
+}
+.profit-content .income li.settled table th {
+    width: 1.5rem;
+}
+.profit-content .income li.settled table th:nth-child(1) {
+    width: 1.1rem;
 }
 .profit-content .income li table tbody {
     display: block;
-    width: 10.15rem;
+    /* width: 10.15rem; */
     height: 8.25rem;
     white-space: nowrap;
-    overflow: auto;
+    /* overflow: auto; */
     background: #fff;
 }
 .profit-content .income li table tbody tr {
@@ -470,10 +482,22 @@
 }
 .profit-content .income li table tbody td {
     display: inline-block;
-    width: 1.8rem;
+    width: 1.1rem;
     height: 0.55rem;
     line-height: 0.55rem;
     font-size: 0.24rem;
+}
+.profit-content .income li table tbody td:nth-child(3) {
+    width: 1.8rem;
+}
+.profit-content .income li table tbody td:nth-child(4) {
+    width: 1.23rem;
+}
+.profit-content .income li.settled table td {
+    width: 1.5rem;
+}
+.profit-content .income li.settled table td:nth-child(1) {
+    width: 1.1rem;
 }
 .profit-content .income li table tbody td .lang {
     display: inline-block;

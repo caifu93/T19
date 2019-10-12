@@ -70,7 +70,7 @@
                                 <td>{%=list[i].createTime%}</td>
                                 <td>{%=list[i].needT19%}</td>
                                 <td>
-                                    <span class="lang" onclick="incomeReceived({%=list[i].needT19%})" key="Receive">{%=list[i].operating%}</span> <!-- 领取 -->
+                                    <span class="lang" onclick="incomeReceived({%=list[i].needT19%}, {%=list[i].id%})" key="Receive">{%=list[i].operating%}</span> <!-- 领取 -->
                                 </td>
                             </tr>
                         {%}%}
