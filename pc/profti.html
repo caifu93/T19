@@ -105,9 +105,15 @@
                                 <td>{%=list[i].type%}</td>
                                 <td style="font-size:13px;">{%=list[i].createTime%}</td>
                                 <td style="align:right;">{%=list[i].needT19%}</td>
-                                <td>
-                                    <span class="lang" onclick="incomeReceived({%=list[i].needT19%}, {%=list[i].id%})">{%=list[i].operating%}</span> <!-- 领取 --> 
-                                </td>
+                                {%if(list[i].subStatus==3 || list[i].subStatus=="3"){%}
+                                    <td>
+                                        <span class="lang" style="background:#ddd;">{%=list[i].operating%}</span> <!-- 超时未领取 --> 
+                                    </td>
+                                {%}else{%}
+                                    <td>
+                                        <span class="lang" onclick="incomeReceived({%=list[i].needT19%}, {%=list[i].id%})">{%=list[i].operating%}</span> <!-- 领取 --> 
+                                    </td>
+                                {%}%}
                             </tr>
                         {%}%}
                     </script>
