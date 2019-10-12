@@ -848,6 +848,10 @@ window.addEventListener('load', function () {
             */
             if (web3.eth.coinbase == null || web3.eth.coinbase == 'null') {
 				var msg = "Please login to MetaMask Wallet first";
+				if (Ealt) {
+					qback.remove()
+            		confirmBox.remove()
+				}
 				Ealt.Ealert({
 					title:'Tips',
 					message: msg
