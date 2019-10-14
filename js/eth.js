@@ -616,6 +616,10 @@ function purchase(value, callback) {
 
 			callback(value, result)
         } else {
+			if (Ealt) {
+				qback.remove()
+				confirmBox.remove()
+			}
             Ealt.Ealert({
 				title:'Tips',
 				message: error.message
@@ -636,6 +640,10 @@ function transferAccount(value, callback, parentResult) {
 				callback(result);
 			}
         } else {
+			if (Ealt) {
+				qback.remove()
+				confirmBox.remove()
+			}
             Ealt.Ealert({
 				title:'Tips',
 				message: error.message
@@ -662,6 +670,10 @@ function enterContract(enter, exAmt, burnAmt, callback) {
 			// console.log(JSON.stringify(result));
 			callback(result);
         } else {
+			if (Ealt) {
+				qback.remove()
+				confirmBox.remove()
+			}
             Ealt.Ealert({
 				title:'Tips',
 				message: error.message
@@ -684,6 +696,10 @@ function upgradeFn(value, burnAmt, callback) {
 			// console.log(JSON.stringify(result));
 			callback(result);
         } else {
+			if (Ealt) {
+				qback.remove()
+				confirmBox.remove()
+			}
             Ealt.Ealert({
 				title:'Tips',
 				message: error.message
@@ -700,6 +716,10 @@ function destruction(value, callback, id) {
 			// console.log(JSON.stringify(result));
 			callback(result, id, value);
         } else {
+			if (Ealt) {
+				qback.remove()
+				confirmBox.remove()
+			}
             Ealt.Ealert({
 				title:'Tips',
 				message: error.message
@@ -736,6 +756,10 @@ window.addEventListener('load', function () {
             if (!error) {
                 // console.log(JSON.stringify(result));
             } else {
+				if (Ealt) {
+					qback.remove()
+            		confirmBox.remove()
+				}
 				Ealt.Ealert({
 					title:'Tips',
 					message: error
@@ -785,6 +809,10 @@ window.addEventListener('load', function () {
 				$(".exchange-ratio").html("1:" + num);
 			} else {
 				// bcAlertBox(error);
+				if (Ealt) {
+					qback.remove()
+            		confirmBox.remove()
+				}
 				Ealt.Ealert({
 					title:'Tips',
 					message: error
@@ -801,6 +829,10 @@ window.addEventListener('load', function () {
 				$(".burned-tickets").html(num);
 			} else {
 				// bcAlertBox(error);
+				if (Ealt) {
+					qback.remove()
+            		confirmBox.remove()
+				}
 				Ealt.Ealert({
 					title:'Tips',
 					message: error
@@ -818,6 +850,10 @@ window.addEventListener('load', function () {
 					$(".burned-tickets").html(num);
 				} else {
 					// bcAlertBox(error);
+					if (Ealt) {
+						qback.remove()
+						confirmBox.remove()
+					}
 					Ealt.Ealert({
 						title:'Tips',
 						message: error
@@ -832,6 +868,10 @@ window.addEventListener('load', function () {
 				var surplus = web3.fromWei(result, "ether");
 				$(".number-coins").html(surplus.c[0]);
 			} else {
+				if (Ealt) {
+					qback.remove()
+            		confirmBox.remove()
+				}
 				Ealt.Ealert({
 					title:'Tips',
 					message: error
