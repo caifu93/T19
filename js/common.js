@@ -150,11 +150,6 @@ function rulesContentH5(res) {
 	$(".rules .content").html(text)
 }
 
-// 统计数据
-// function vital(res) {
-	
-// }
-
 // ----------------------我的收益----------------------------------------
 var page1 = {
 	pageNumber: 1,
@@ -176,19 +171,63 @@ function showList1(res) {
 			if (localStorage.getItem("lang")) {
 				switch (localStorage.getItem("lang")) {
 					case "fan":
-						val.type = val.type == 1 ? "級差" : "升級";
+						switch (val.type) {
+							case 1:
+								val.type = "級差";
+								break;
+							case 2:
+								val.type = "升級";
+								break;
+							case 3:
+								val.type = "參與合約";
+								break;
+						};
+
 						val.operating = "領取";
 						break;
 					case "en":
-						val.type = val.type == 1 ? "Level" : "upgrade";
+						switch (val.type) {
+							case 1:
+								val.type = "Level";
+								break;
+							case 2:
+								val.type = "upgrade";
+								break;
+							case 3:
+								val.type = "join contract";
+								break;
+						};
+
 						val.operating = "receive";
 						break;
 					case "kor":
-						val.type = val.type == 1 ? "레벨 차이" : "업그레이드";
+						switch (val.type) {
+							case 1:
+								val.type = "레벨 차이";
+								break;
+							case 2:
+								val.type = "업그레이드";
+								break;
+							case 3:
+								val.type = "계약에 참여하다";
+								break;
+						};
+
 						val.operating = "받기";
 						break;
 					case "jp":
-						val.type = val.type == 1 ? "レベル差" : "アップグレード";
+						switch (val.type) {
+							case 1:
+								val.type = "レベル差";
+								break;
+							case 2:
+								val.type = "アップグレード";
+								break;
+							case 3:
+								val.type = "契約に参加する";
+								break;
+						};
+
 						val.operating = "受け取る";
 						break;
 				}

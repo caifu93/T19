@@ -826,7 +826,7 @@ window.addEventListener('load', function () {
 				// console.log(result)
 				// 参与合约所需T19
 				var num = new Number(result[3]).toLocaleString().replace(/,/g, "")/Math.pow(10, 18);
-				$(".burned-tickets").html(num);
+				$(".burned-tickets").html(parseFloat(num.toFixed(6)));
 			} else {
 				// bcAlertBox(error);
 				if (Ealt) {
@@ -847,7 +847,7 @@ window.addEventListener('load', function () {
 					// console.log(result)
 					// 参与合约所需T19
 					var num = new Number(result[3]).toLocaleString().replace(/,/g, "")/Math.pow(10, 18);
-					$(".burned-tickets").html(num);
+					$(".burned-tickets").html(parseFloat(num.toFixed(6)));
 				} else {
 					// bcAlertBox(error);
 					if (Ealt) {
@@ -866,7 +866,7 @@ window.addEventListener('load', function () {
 		contract.totalSupply({ from: account }, function (error, result) {
 			if (!error) {
 				var surplus = web3.fromWei(result, "ether");
-				$(".number-coins").html(surplus.c[0]);
+				$(".number-coins").html(parseFloat(Number(surplus.c[0]).toFixed(6)));
 			} else {
 				if (Ealt) {
 					qback.remove()
