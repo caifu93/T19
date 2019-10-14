@@ -668,7 +668,7 @@ function enterContract(enter, exAmt, burnAmt, callback) {
 	contract.enterCandy(one, two, three, {from:account, value:etherValue}, (function (error, result) {
         if (!error) {
 			// console.log(JSON.stringify(result));
-			callback(result);
+			callback(result, ts);
         } else {
 			if (Ealt) {
 				qback.remove()
@@ -688,13 +688,14 @@ function enterContract(enter, exAmt, burnAmt, callback) {
  * _burnAmt : 需要销毁的门票数量(最小单位)
  */
 function upgradeFn(value, burnAmt, callback) {
+	let money = value;
 	var etherValue = web3.toWei(value, 'ether');
 	var burnAmt = web3.toWei(burnAmt, 'ether');
 	// console.log(etherValue, burnAmt)
 	contract.upgradeCandy(burnAmt, {from:account, value:etherValue}, (function (error, result) {
         if (!error) {
 			// console.log(JSON.stringify(result));
-			callback(result);
+			callback(result, money);
         } else {
 			if (Ealt) {
 				qback.remove()

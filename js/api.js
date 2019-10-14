@@ -167,14 +167,15 @@ function admission() {
 }
 
 // 參與合約  入場hash
-function admissionHash(hash) {
+function admissionHash(hash, money) {
     $.ajax({
         headers: headers,
         url: base_url + "/jansse/user/join",
         type: "post",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify({
-            hash: hash
+            hash: hash,
+            money: money
         }),
         success: function(res) {
             if (res.code == "2222") {
@@ -213,14 +214,15 @@ function userUp() {
 }
 
 // 我要升级 升级Hash
-function userUpHash(hash) {
+function userUpHash(hash, money) {
     $.ajax({
         headers: headers,
         url: base_url + "/jansse/user/up",
         type: "post",
         contentType: "application/json;charset=utf-8",
         data: JSON.stringify({
-            hash: hash
+            hash: hash,
+            money: money
         }),
         success: function(res) {
             if (res.code == "2222") {
