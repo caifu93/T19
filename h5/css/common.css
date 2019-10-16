@@ -193,7 +193,7 @@
     font-size: 0.24rem;
     background: #0485D2;
     border-radius: 0.12rem;
-    color: #fff;
+    /* color: #fff; */
     word-wrap: break-word;
     line-height: 0.3rem;
     overflow: auto;

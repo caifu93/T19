@@ -163,7 +163,7 @@ function rulesContentH5(res) {
 				break
 		};
 
-		text = title + "<br/>" + res.data[1].content;
+		text = "<p style='margin-bottom:10px;color:#fff;'>" + title + "</p>" + res.data[1].content;
 	}
 	$(".rules .content").html(text)
 }

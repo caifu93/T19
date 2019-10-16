@@ -46,7 +46,7 @@ var arrLang = {
         "Settled": "已結算",
         "Level": "級差",
         "Totalsettled": "已結算ETH總數量：",
-        "Participationrules": "参与规则",
+        "Participationrules": "參與規則",
     },
     "en": {
         "Home": "Home",

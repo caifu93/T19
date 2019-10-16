@@ -184,7 +184,7 @@ html, body {
     min-height: 560px;
     padding-left: 55px;
     padding-top: 45px;
-    color: #fff;
+    /* color: #fff; */
     background: #2ba5d7;
     border-radius: 8px;
     margin: 0 auto;
