@@ -112,12 +112,13 @@ function swiperList(res) {
 // 规则 pc
 function rulesContent(res) {
 	if (res.code == "2222") {
-		jo.reTpl(
-			$("#temp"), {
-				list: res.data
-			},
-			$("#cont")
-		);
+		// jo.reTpl(
+		// 	$("#temp"), {
+		// 		list: res.data
+		// 	},
+		// 	$("#cont")
+		// );
+		$(".content-box .rule-text").html(res.data[1].content)
 	}
 }
 

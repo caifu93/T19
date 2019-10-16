@@ -200,7 +200,8 @@ html, body {
 }
 .content-box .rule-info .rule-cont .rule-text {
     width: 765px;
-    height: 200px;
+    /* height: 200px; */
+    height: 510px;
     overflow-x: hidden;
     overflow-y: auto;
     margin-top: 5px;

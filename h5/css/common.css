@@ -237,11 +237,18 @@
     font-size: 0.22rem;
     color: #fff;
     line-height: 0.43rem;
+
+    position: relative;
 }
 .lever-img img {
-    width: 0.43rem;
+    /* width: 0.43rem;
     position: relative;
-    left: 0.1rem;
+    left: 0.1rem; */
+
+    width: 0.73rem;
+    position: absolute;
+    right: -0.1rem;
+    top: -0.04rem;
 }
 .edition {
     font-size: 0.18rem;
