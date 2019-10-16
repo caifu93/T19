@@ -354,6 +354,16 @@ html, body {
 .contract-nav .cn-box img {
     vertical-align: middle;
 }
+.contract-nav .cn-box .to-home {
+    color: #333;
+    padding: 0;
+    display: inline;
+    cursor: pointer;
+}
+.contract-nav .cn-box .to-home:hover {
+    background: none;
+    color: #333;
+}
 .contract-nav .cn-box .current {
     color: #999;
 }

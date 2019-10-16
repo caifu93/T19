@@ -251,6 +251,13 @@
 }
 
 /* 參與規則 */
+.rules-title {
+    color: #333;
+    font-size: 0.28rem;
+    margin-left: 0.2rem;
+    margin-top: 0.42rem;
+    margin-bottom: 0.2rem;
+}
 .rules-content .title {
     color: #333;
     font-size: 0.28rem;

@@ -144,8 +144,25 @@ function swiperListH5(res) {
 // 规则 h5
 function rulesContentH5(res) {
 	var text = "";
+	var title = "參與規則:";
 	if (res.code == "2222") {
-		text += res.data[0].title + "：" + res.data[0].content;
+		// text += res.data[1].title + "：" + res.data[1].content;
+		switch (localStorage.getItem("lang")) { 
+			case "fan": 
+				title = "參與規則:";
+				break
+			case "en": 
+				title = "Participation rules:";
+				break
+			case "kor": 
+				title = "참여 규칙:";
+				break
+			case "jp": 
+				title = "参加ルール:";
+				break
+		};
+
+		text = title + "<br/>" + res.data[1].content;
 	}
 	$(".rules .content").html(text)
 }

@@ -1,6 +1,7 @@
 var arrLang = {
     "fan": {
         "Home": "首頁",
+        "Home2": "返回首頁",
         "Buy": "購買",
         "Title": "糖果派",
         "Ffp": "玩家盛宴",
@@ -45,9 +46,11 @@ var arrLang = {
         "Settled": "已結算",
         "Level": "級差",
         "Totalsettled": "已結算ETH總數量：",
+        "Participationrules": "参与规则",
     },
     "en": {
         "Home": "Home",
+        "Home2": "Back to home",
         "Buy": "Buy",
         "Title": "Candy pie",
         "Ffp": "The player feast",
@@ -81,9 +84,9 @@ var arrLang = {
         "Invitationlink": "My invitation link",
         "Copyinvitationlink": "Copy my invitation link",
         "Income": "Revenue",
-        "Numbercoins": "number of platform coins",
+        "Numbercoins": "Number of platform coins",
         "Pendingincome": "Pending income",
-        "Settlementrevenue": "settled revenue",
+        "Settlementrevenue": "Settled revenue",
         "NumberETH": "ETH Number",
         "Incometype": "type",
         "Incometime": "time",
@@ -92,9 +95,11 @@ var arrLang = {
         "Settled": "Closed",
         "Level": "Level difference",
         "Totalsettled": "Total number of settled ETH:",
+        "Participationrules": "Participation rules",
     },
     "kor": {
         "Home": "첫 페이지",
+        "Home2": "첫 페이지로 되돌아가다",
         "Buy": "구매",
         "Title": "캔디 파이",
         "Ffp": "플레이어 잔치",
@@ -139,9 +144,11 @@ var arrLang = {
         "Settled": "정착",
         "Level": "레벨 차이",
         "Totalsettled": "정산 된 총 ETH 수 :",
+        "Participationrules": "참여 규칙",
     },
     "jp": {
         "Home": "ホーム",
+        "Home2": "最初のページに戻ります",
         "Buy": "購入する",
         "Title": "キャンディーパイ",
         "Ffp": "プレイヤーのごちそう",
@@ -186,5 +193,6 @@ var arrLang = {
         "Settled": "落ち着いた",
         "Level": "レベル差",
         "Totalsettled": "決済済みETHの総数：",
+        "Participationrules": "参加ルール",
     }
 };
