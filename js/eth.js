@@ -864,8 +864,26 @@ window.addEventListener('load', function () {
 		})
 		
 		// 平台币剩余总量
-		contract.totalSupply({ from: account }, function (error, result) {
+		// contract.totalSupply({ from: account }, function (error, result) {
+		// 	if (!error) {
+		// 		var surplus = web3.fromWei(result, "ether");
+		// 		$(".number-coins").html(parseFloat(Number(surplus.c[0]).toFixed(6)));
+		// 	} else {
+		// 		if (Ealt) {
+		// 			qback.remove()
+        //     		confirmBox.remove()
+		// 		}
+		// 		Ealt.Ealert({
+		// 			title:'Tips',
+		// 			message: error
+		// 		})
+		// 	}
+		// });
+
+		// 个人平台币剩余数量
+		contract.balanceOf(web3.eth.accounts[0], { from: web3.eth.accounts[0] }, function (error, result) {
 			if (!error) {
+				// console.log(result)
 				var surplus = web3.fromWei(result, "ether");
 				$(".number-coins").html(parseFloat(Number(surplus.c[0]).toFixed(6)));
 			} else {
@@ -879,7 +897,6 @@ window.addEventListener('load', function () {
 				})
 			}
 		});
-
 
 
         if (web3.currentProvider.isMetaMask == true) {
@@ -947,6 +964,23 @@ function getChange() {
 			// if (localStorage.getItem("isRegister") && !localStorage.getItem("ncc-isLogin")) {
 				login({walletPath: web3.eth.accounts[0]});
 			// }
+
+			contract.balanceOf(account, { from: account }, function (error, result) {
+				if (!error) {
+					console.log(result)
+					// var surplus = web3.fromWei(result, "ether");
+					// $(".number-coins").html(parseFloat(Number(surplus.c[0]).toFixed(6)));
+				} else {
+					// if (Ealt) {
+					// 	qback.remove()
+					// 	confirmBox.remove()
+					// }
+					// Ealt.Ealert({
+					// 	title:'Tips',
+					// 	message: error
+					// })
+				}
+			});
 
 			// setTimeout(function() {
 			// 	window.location.reload();
