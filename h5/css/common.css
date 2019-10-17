@@ -245,10 +245,10 @@
     position: relative;
     left: 0.1rem; */
 
-    width: 0.73rem;
+    width: 0.56rem;
     position: absolute;
     right: -0.1rem;
-    top: -0.04rem;
+    top: -0.02rem;
 }
 .edition {
     font-size: 0.18rem;
@@ -307,7 +307,7 @@
     color: #666666;
 }
 .cc.lever-img img {
-    width: 0.8rem;
+    width: 0.7rem;
     position: relative;
     left: 0.1rem;
     top: 0.15rem;

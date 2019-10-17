@@ -280,9 +280,9 @@ html, body {
     background: rgba(11, 161, 248, .6);
 }
 .lever-img img {
-    width: 50px;
+    width: 40px;
     position: relative;
-    top: 8px;
+    top: 11px;
     left: 10px;
 }
 .friend-form .lever-img img {
